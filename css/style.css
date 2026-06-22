@@ -1114,3 +1114,133 @@
     right: auto;
   }
 }
+
+/* ===== MOBILE SCROLL MODE ===== */
+@media (max-width: 768px) {
+  html, body {
+    overflow: visible !important;
+    height: auto !important;
+    scroll-behavior: smooth;
+  }
+  #sections-wrap {
+    position: relative;
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+  .section {
+    position: relative;
+    inset: auto;
+    min-height: 100vh;
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+  .section-content {
+    position: relative;
+    opacity: 1 !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 92vw;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  #main-nav {
+    position: fixed;
+    right: .8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    gap: .7rem;
+    background: rgba(10,16,30,.5);
+    padding: .6rem .35rem;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .nav-dot { width: 8px; height: 8px; }
+  .nav-dot::after { display: none; }
+  #topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 1rem 1.2rem;
+    background: rgba(10,16,30,.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+  }
+  .scroll-indicator { display: none; }
+  .home-content { padding-top: 0; }
+  .home-name { font-size: clamp(2.6rem, 12vw, 4rem); }
+  .home-role { font-size: .85rem; max-width: 100%; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .about-img-wrap { width: 180px; height: 270px; margin: 0 auto; }
+  .about-desc { font-size: .85rem; }
+  .skill-pills { justify-content: center; }
+  .work-wrap, .stats-wrap, .services-wrap, .contact-wrap, .experience-wrap {
+    max-width: 92vw; width: 100%;
+  }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+  .project-card { height: 120px; min-height: 120px; }
+  .project-overlay { padding: .5rem; }
+  .project-name { font-size: .68rem; }
+  .project-tag { font-size: .4rem; }
+  .project-link { display: none; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+  .stat-num { font-size: 2.2rem; }
+  .stat-label { font-size: .5rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+  .service-card { padding: .9rem; }
+  .service-icon { width: 32px; height: 32px; font-size: .95rem; margin-bottom: .6rem; }
+  .service-name { font-size: .75rem; }
+  .service-desc { font-size: .62rem; line-height: 1.5; }
+  .experience-wrap { max-height: none; padding: 1rem; }
+  .timeline::before { left: 8px; }
+  .timeline-item, .timeline-item:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 1.5rem 1.6rem;
+  }
+  .timeline-dot, .timeline-item:nth-child(even) .timeline-dot { left: 1px; }
+  .timeline-card { padding: .9rem; }
+  .timeline-role { font-size: 1rem; }
+  .timeline-company { font-size: .7rem; }
+  .timeline-desc { font-size: .7rem; }
+  .timeline-tag { font-size: .5rem; }
+  .contact-sub { font-size: .85rem; }
+  .contact-form { margin-top: 1rem; }
+  .cf-field { padding: .65rem .8rem; font-size: .85rem; }
+  textarea.cf-field { height: 80px; }
+  .btn-cv { padding: .55rem 1rem; font-size: .6rem; }
+  .social-btn { width: 38px; height: 38px; font-size: .95rem; }
+  .section-title { font-size: clamp(1.8rem, 7vw, 2.4rem); margin-bottom: 1rem; }
+  .section-label { font-size: .55rem; margin-bottom: .4rem; }
+}
+@media (max-width: 480px) {
+  .section { padding: 4rem 0; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: .45rem; }
+  .project-card { height: 100px; min-height: 100px; }
+  .project-name { font-size: .62rem; }
+  .project-tag { font-size: .36rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: .45rem; }
+  .service-card { padding: .75rem; }
+  .service-icon { width: 28px; height: 28px; font-size: .85rem; }
+  .service-name { font-size: .68rem; }
+  .service-desc { font-size: .58rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+  .stat-card { padding: 1rem .5rem; }
+  .stat-num { font-size: 1.8rem; }
+  .stat-label { font-size: .45rem; }
+  .about-img-wrap { width: 160px; height: 240px; }
+  .home-name { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+}
+@media (max-width: 360px) {
+  .project-card { height: 90px; min-height: 90px; }
+  .project-name { font-size: .55rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { padding: .7rem 1rem; }
+}

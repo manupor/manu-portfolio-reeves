@@ -4,6 +4,9 @@ $(function() {
   let current = 0;
   let total = 7;
   let animating = false;
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const mobileMedia = window.matchMedia('(max-width: 768px)');
+  function checkMobile() { return mobileMedia.matches; }
 
   // Custom Cursor 
   $(document).on('mousemove', function(e) {
@@ -22,7 +25,21 @@ $(function() {
 
   // Go to section 
   window.goTo = function(idx) {
-    if (animating || idx === current || idx < 0 || idx >= total) return;
+    if (idx < 0 || idx >= total) return;
+    if (checkMobile()) {
+      // Mobile: smooth scroll to section
+      const $target = $('#sec-' + idx);
+      if ($target.length) {
+        const top = $target.offset().top;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        $('.nav-dot').removeClass('active');
+        $('[data-section="' + idx + '"]').addClass('active');
+        current = idx;
+        onSectionActive(idx);
+      }
+      return;
+    }
+    if (animating || idx === current) return;
     animating = true;
     const dir = idx > current ? 1 : -1;
     const $cur = $('#sec-' + current);
@@ -101,6 +118,7 @@ $(function() {
   // Wheel scroll 
   let lastWheel = 0;
   $(window).on('wheel', function(e) {
+    if (checkMobile()) return;
     const now = Date.now();
     if (now - lastWheel < 600) return;
     const dir = e.originalEvent.deltaY > 0 ? 1 : -1;
@@ -119,10 +137,12 @@ $(function() {
   let touchStartY = 0;
   let touchStartX = 0;
   $(document).on('touchstart', function(e) {
+    if (checkMobile()) return;
     touchStartY = e.originalEvent.touches[0].clientY;
     touchStartX = e.originalEvent.touches[0].clientX;
   });
   $(document).on('touchend', function(e) {
+    if (checkMobile()) return;
     const diffY = touchStartY - e.originalEvent.changedTouches[0].clientY;
     const diffX = touchStartX - e.originalEvent.changedTouches[0].clientX;
     if (Math.abs(diffY) > 40 && Math.abs(diffY) > Math.abs(diffX)) {
@@ -138,6 +158,7 @@ $(function() {
 
   // Keyboard 
   $(document).on('keydown', function(e) {
+    if (checkMobile()) return;
     const down = e.key === 'ArrowDown' || e.key === 'PageDown';
     const up = e.key === 'ArrowUp' || e.key === 'PageUp';
     if (!down && !up) return;
@@ -209,6 +230,26 @@ $(function() {
   }
 
   $(document).on('click', '.project-card', function() { openModal(this); });
+
+  // Mobile scroll spy for nav dots
+  if (isMobile) {
+    $(window).on('scroll', function() {
+      const scrollPos = $(window).scrollTop();
+      let activeIdx = 0;
+      $('.section').each(function(idx) {
+        const top = $(this).offset().top;
+        const height = $(this).outerHeight();
+        if (scrollPos >= top - height / 2) {
+          activeIdx = idx;
+        }
+      });
+      if (activeIdx !== current) {
+        $('.nav-dot').removeClass('active');
+        $('[data-section="' + activeIdx + '"]').addClass('active');
+        current = activeIdx;
+      }
+    });
+  }
   $('#modal-close, #modal-backdrop').on('click', closeModal);
   $(document).on('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
