@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuel Portuguez — Full-Stack Developer & UX/UI Designer</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="grid-bg"></div>
+<div id="topbar">
+  <div class="logo-text">MP.</div>
+  <div class="status-badge">
+    <div class="status-dot"></div>
+    Available for projects
+  </div>
+</div>
+<nav id="main-nav">
+  <div class="nav-dot active" data-section="0" data-label="Home"></div>
+  <div class="nav-dot" data-section="1" data-label="About"></div>
+  <div class="nav-dot" data-section="2" data-label="Work"></div>
+  <div class="nav-dot" data-section="3" data-label="Experience"></div>
+  <div class="nav-dot" data-section="4" data-label="Skills"></div>
+  <div class="nav-dot" data-section="5" data-label="Services"></div>
+  <div class="nav-dot" data-section="6" data-label="Contact"></div>
+</nav>
+<section class="section active" id="sec-0">
+  <div class="section-content home-content">
+    <div class="home-pre">Full-Stack Developer & UX/UI Designer</div>
+    <div class="glitch-wrap" data-text="MANUEL PORTUGUEZ">
+      <h1 class="home-name">MANUEL PORTUGUEZ</h1>
+    </div>
+    <p class="home-role">I build <span>scalable digital products</span> and <span>high-converting brand experiences</span> for ambitious companies.</p>
+    <div class="home-cta">
+      <a class="btn-glow" onclick="goTo(2)">View Work</a>
+      <a class="btn-outline-glow" onclick="goTo(6)">Get In Touch</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      scroll
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-1">
+  <div class="section-content">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-frame">
+          <img src="img/me.jpg" alt="Manuel Portuguez">
+        </div>
+        <div class="about-img-deco"></div>
+
+      </div>
+      <div>
+        <div class="section-label">Who I Am</div>
+        <div class="about-title">Design-led. <span class="accent">Code-built.</span><br>Results-driven.</div>
+        <p class="about-desc">
+          I am Manuel — a full-stack developer, UX/UI designer, and visual architect based in Costa Rica. I create premium brand identities and high-converting digital experiences for companies worldwide.
+          <br><br>
+          Founder of <strong>CodeCraftt</strong>. 15+ years shipping products across SaaS, fintech, and enterprise — from Amazon Web Services and the AWS CFO Office to independent startups. I combine business strategy, product design, and software development to turn ideas into functional products.
+        </p>
+        <div class="skill-pills">
+          <span class="skill-pill">Next.js</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">TypeScript</span>
+          <span class="skill-pill">Tailwind CSS</span>
+          <span class="skill-pill">AWS</span>
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">WordPress</span>
+          <span class="skill-pill">WooCommerce</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-2">
+  <div class="section-content work-wrap">
+    <div class="section-label">Portfolio</div>
+    <div class="section-title">Selected Work</div>
+    <div class="projects-grid">
+      <div class="project-card"
+        data-title="Benefits"
+        data-img="img/portfolio/benefits.jpg"
+        data-tags="SaaS,Loyalty Platform,QR"
+        data-desc="QR-based loyalty platform that turns one-time buyers into repeat customers — no apps, no cards."
+        data-role="Designer & Developer"
+        data-year="2024"
+        data-stack="SaaS · QR Loyalty · Web Platform"
+        data-live="https://benefits.lat" data-github="#">
+        <img src="img/portfolio/benefits.jpg" alt="Benefits">
+        <div class="project-overlay">
+          <div class="project-tag">SaaS · Loyalty Platform</div>
+          <div class="project-name">Benefits</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+      <div class="project-card"
+        data-title="Clenivax"
+        data-img="img/portfolio/clenivax.jpg"
+        data-tags="Medical Supplies,Web Design,Branding"
+        data-desc="Branding and marketing website for a medical supplies company — clean design, product catalog, and conversion-focused layout."
+        data-role="Brand Designer & Web Developer"
+        data-year="2024"
+        data-stack="Web Design · Branding · Conversion"
+        data-live="https://clenivax.com" data-github="#">
+        <img src="img/portfolio/clenivax.jpg" alt="Clenivax">
+        <div class="project-overlay">
+          <div class="project-tag">Medical Supplies · Web</div>
+          <div class="project-name">Clenivax</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+      <div class="project-card"
+        data-title="Cielo Digital"
+        data-img="img/portfolio/cielodigital.jpg"
+        data-tags="Web Design,Development,Agency"
+        data-desc="High-performance agency landing page — conversion-focused, bold visual identity, pixel-perfect."
+        data-role="Full-Stack Developer & UX/UI Designer"
+        data-year="2024"
+        data-stack="Next.js · Tailwind CSS · Figma"
+        data-live="https://cielodigital.io" data-github="#">
+        <img src="img/portfolio/cielodigital.jpg" alt="Cielo Digital">
+        <div class="project-overlay">
+          <div class="project-tag">Web Design · Development</div>
+          <div class="project-name">Cielo Digital</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+      <div class="project-card"
+        data-title="Mi Barra Nutrición"
+        data-img="img/portfolio/mibarra.jpg"
+        data-tags="E-Commerce,Web Design,Nutrition"
+        data-desc="Full website for a nutrition bar brand — clean e-commerce layout, strong visual identity."
+        data-role="Web Designer & Developer"
+        data-year="2024"
+        data-stack="E-commerce · Web Design · Branding"
+        data-live="https://www.mibarranutricion.com" data-github="#">
+        <img src="img/portfolio/mibarra.jpg" alt="Mi Barra Nutrición">
+        <div class="project-overlay">
+          <div class="project-tag">E-Commerce · Web</div>
+          <div class="project-name">Mi Barra Nutrición</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+      <div class="project-card"
+        data-title="Ruby Wager"
+        data-img="img/portfolio/rubywager.jpg"
+        data-tags="Web Development,Next.js,Sportsbook"
+        data-desc="Sportsbook and casino platform — Next.js, high-performance UX, seamless multi-product experience."
+        data-role="Full-Stack Developer"
+        data-year="2024"
+        data-stack="Next.js · High-Performance UX · Casino"
+        data-live="https://rubywager.com" data-github="#">
+        <img src="img/portfolio/rubywager.jpg" alt="Ruby Wager">
+        <div class="project-overlay">
+          <div class="project-tag">Web Development · Next.js</div>
+          <div class="project-name">Ruby Wager</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+      <div class="project-card"
+        data-title="EGSU Homes"
+        data-img="img/portfolio/egsuhomes.jpg"
+        data-tags="Luxury Real Estate,Web Development,Portal"
+        data-desc="Premium website for a luxury construction company — high-end visual identity, project showcases, and client portal."
+        data-role="Web Developer & UX/UI Designer"
+        data-year="2024"
+        data-stack="Web Development · Luxury Real Estate · Portal"
+        data-live="https://build.egsuhomes.com" data-github="#">
+        <img src="img/portfolio/egsuhomes.jpg" alt="EGSU Homes">
+        <div class="project-overlay">
+          <div class="project-tag">Luxury Real Estate · Web</div>
+          <div class="project-name">EGSU Homes</div>
+          <span class="project-link"><i class="bi bi-arrow-up-right"></i> View Details</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-3">
+  <div class="section-content experience-wrap">
+    <div class="section-label">Career Path</div>
+    <div class="section-title">Experience</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Feb 2026 – Present</div>
+          <div class="timeline-role">Founder & Full-Stack Developer</div>
+          <div class="timeline-company">CodeCraftt</div>
+          <div class="timeline-desc">Founder of a digital product studio focused on scalable web apps, SaaS platforms, AI-assisted solutions, and high-performance websites. Combines business strategy, UX/UI, and software development.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Next.js</span>
+            <span class="timeline-tag">React</span>
+            <span class="timeline-tag">TypeScript</span>
+            <span class="timeline-tag">AWS</span>
+            <span class="timeline-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Jun 2024 – Jan 2026</div>
+          <div class="timeline-role">Art Director & Full-Stack Developer</div>
+          <div class="timeline-company">Olavivo</div>
+          <div class="timeline-desc">Led creative direction and development of web platforms for an international affiliate-marketing company. Built conversion-oriented experiences, AWS infrastructure, and bilingual campaigns.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Art Direction</span>
+            <span class="timeline-tag">AWS</span>
+            <span class="timeline-tag">UX/UI</span>
+            <span class="timeline-tag">Landing Pages</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Jun 2024 – Feb 2026</div>
+          <div class="timeline-role">Full-Stack Developer & UX/UI Designer</div>
+          <div class="timeline-company">Cielo Digital S.R.L.</div>
+          <div class="timeline-desc">Designed and developed digital experiences for clients, combining UX/UI, branding, WordPress, Elementor, and motion graphics.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Figma</span>
+            <span class="timeline-tag">WordPress</span>
+            <span class="timeline-tag">Elementor</span>
+            <span class="timeline-tag">Motion Graphics</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Oct 2023 – Jun 2024</div>
+          <div class="timeline-role">Senior Visual Designer & Advertising Lead</div>
+          <div class="timeline-company">Texas Tech University – Costa Rica</div>
+          <div class="timeline-desc">Led visual design and advertising initiatives to strengthen brand presence and support student recruitment across academic programs.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Branding</span>
+            <span class="timeline-tag">Advertising</span>
+            <span class="timeline-tag">Campaigns</span>
+            <span class="timeline-tag">Social Media</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">2022 – Mar 2023</div>
+          <div class="timeline-role">Visual Designer · AWS CFO Office</div>
+          <div class="timeline-company">Amazon Web Services</div>
+          <div class="timeline-desc">Created visual and digital communication materials for internal AWS initiatives, combining design, motion graphics, instructional design, and web content.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">AWS</span>
+            <span class="timeline-tag">Visual Design</span>
+            <span class="timeline-tag">Motion Graphics</span>
+            <span class="timeline-tag">Corporate</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Dec 2018 – Jan 2022</div>
+          <div class="timeline-role">Digital Content Designer</div>
+          <div class="timeline-company">Amazon</div>
+          <div class="timeline-desc">Designed digital experiences and content for recruitment, internal communication, and marketing initiatives. Produced motion graphics, videos, and UX/UI solutions.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">UX/UI</span>
+            <span class="timeline-tag">Web Design</span>
+            <span class="timeline-tag">Motion Graphics</span>
+            <span class="timeline-tag">Campaigns</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-period">Feb 2009 – Present</div>
+          <div class="timeline-role">Freelance Visual Designer · UX/UI · Web Developer</div>
+          <div class="timeline-company">Self-employed</div>
+          <div class="timeline-desc">More than 15 years delivering creative and digital solutions across industries — websites, branding, UX/UI, e-commerce, motion graphics, and conversion-focused landing pages.</div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Branding</span>
+            <span class="timeline-tag">Front-End</span>
+            <span class="timeline-tag">WooCommerce</span>
+            <span class="timeline-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-4">
+  <div class="section-content stats-wrap">
+    <div class="section-label">Numbers</div>
+    <div class="section-title">By the Stats</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num counter" data-target="15">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num counter" data-target="6">0</div>
+        <div class="stat-label">Featured Projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num counter" data-target="4">0</div>
+        <div class="stat-label">Countries Reached</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num counter" data-target="12">0</div>
+        <div class="stat-label">Core Technologies</div>
+      </div>
+    </div>
+    <div class="skills-bars">
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>UX/UI Design & Visual Systems</span><span>95%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Front-End Development</span><span>92%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Brand Identity & Web Design</span><span>90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Full-Stack & Cloud Solutions</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-5">
+  <div class="section-content services-wrap">
+    <div class="section-label">What I Do</div>
+    <div class="section-title">Services</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-palette"></i></div>
+        <div class="service-name">Brand Identity & Visual Design</div>
+        <div class="service-desc">Logos, color systems, typography, and brand guidelines that give your company a distinct, memorable presence.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+        <div class="service-name">Web Design & Development</div>
+        <div class="service-desc">Custom websites built on Next.js, React, and Tailwind CSS — fast, responsive, and designed to convert visitors into clients.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-cart3"></i></div>
+        <div class="service-name">E-Commerce & WooCommerce</div>
+        <div class="service-desc">Conversion-focused online stores on WooCommerce, Shopify, or WordPress — built to sell from day one.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-rocket"></i></div>
+        <div class="service-name">Landing Pages</div>
+        <div class="service-desc">High-converting, SEO-ready landing pages for campaigns and product launches. Designed to turn traffic into leads.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="service-name">UX/UI Design</div>
+        <div class="service-desc">Design systems, wireframes, and pixel-perfect interfaces for SaaS, fintech, and enterprise products in Figma.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="bi bi-cloud"></i></div>
+        <div class="service-name">Cloud & Digital Strategy</div>
+        <div class="service-desc">AWS-supported digital platforms, technical planning, product strategy, and AI-assisted workflows for scalable growth.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-6">
+  <div class="section-content contact-wrap">
+    <div class="section-label">Let us Talk</div>
+    <div class="section-title">Start a Project</div>
+    <p class="contact-sub">Have a product to build, a website to launch, or a brand to design? I would love to hear about it — let us make it happen.</p>
+    <div class="contact-actions">
+      <a class="social-btn" href="mailto:manuportuguez@gmail.com" title="Email" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+      <a class="btn-cv" href="cv/manuel-portuguez-cv.pdf" download>
+        <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+      </a>
+    </div>
+    <div class="contact-form">
+      <div class="cf-row">
+        <input class="cf-field" type="text" placeholder="Your Name">
+        <input class="cf-field" type="email" placeholder="Email Address">
+      </div>
+      <textarea class="cf-field" placeholder="Tell me about your project..."></textarea>
+      <a class="btn-glow" href="https://wa.me/50683442522" style="display:inline-block;">Send Message via WhatsApp &nbsp;<i class="bi bi-whatsapp"></i></a>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/manu-portuguez-023849128/" class="social-btn" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.behance.net/manuportuguez" class="social-btn" title="Behance" target="_blank"><i class="bi bi-behance"></i></a>
+      <a href="mailto:manuportuguez@gmail.com" class="social-btn" title="Email" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+      <a href="https://wa.me/50683442522" class="social-btn" title="WhatsApp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</section>
+<div id="proj-modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop-blur" id="modal-backdrop"></div>
+  <div class="modal-box">
+    <div class="modal-img-wrap">
+      <img id="modal-img" class="modal-hero-img" src="" alt="">
+      <div class="modal-img-gradient"></div>
+      <button class="modal-close-btn" id="modal-close" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="modal-body-wrap">
+      <div class="modal-tags-row" id="modal-chips"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-meta-grid">
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">My Role</span>
+          <span class="modal-meta-val" id="modal-role"></span>
+        </div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Year</span>
+          <span class="modal-meta-val" id="modal-year"></span>
+        </div>
+        <div class="modal-meta-item">
+          <span class="modal-meta-label">Tech Stack</span>
+          <span class="modal-meta-val" id="modal-stack"></span>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <a id="modal-live" href="#" class="mbtn-primary" target="_blank">
+          <i class="bi bi-box-arrow-up-right"></i> Live Preview
+        </a>
+        <a id="modal-github" href="#" class="mbtn-secondary" target="_blank">
+          <i class="bi bi-github"></i> View Code
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
